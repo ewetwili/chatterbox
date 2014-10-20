@@ -7,7 +7,8 @@ def name(val):
         return "Your name is required!"
 
     # Need more validators here
-
+    if re.search(r'bieber',val,re.IGNORECASE):
+        return "No Bieber in here plz"
     return None
 
 
@@ -18,7 +19,7 @@ def content(val):
 
     if re.search(r'https?://', val, re.IGNORECASE):
         return "You can't post links!"
-
+   
     # Need more validators here
 
     return None
